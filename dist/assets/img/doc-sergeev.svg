@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1035" width="900" height="1035" role="img" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="i78493base" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#03181A"/><stop offset=".55" stop-color="#0A3B3D"/><stop offset="1" stop-color="#03181A"/>
+</linearGradient>
+<radialGradient id="i78493l1" cx="35%" cy="14%" r="72%">
+<stop offset="0" stop-color="#6FE0D0" stop-opacity="0.37"/><stop offset="1" stop-color="#6FE0D0" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="i78493l2" cx="78%" cy="77%" r="66%">
+<stop offset="0" stop-color="#0F827E" stop-opacity=".5"/><stop offset="1" stop-color="#0F827E" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="i78493l3" cx="57%" cy="73%" r="60%">
+<stop offset="0" stop-color="#C9B392" stop-opacity=".24"/><stop offset="1" stop-color="#C9B392" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="i78493bok"><stop offset="0" stop-color="#6FE0D0" stop-opacity=".85"/><stop offset=".72" stop-color="#6FE0D0" stop-opacity=".18"/><stop offset="1" stop-color="#6FE0D0" stop-opacity="0"/></radialGradient>
+<radialGradient id="i78493vig" cx="50%" cy="46%" r="72%"><stop offset=".5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#03181A" stop-opacity=".72"/></radialGradient>
+<linearGradient id="i78493sw" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".13"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="i78493sil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#03181A" stop-opacity=".46"/><stop offset=".5" stop-color="#03181A" stop-opacity=".68"/><stop offset="1" stop-color="#03181A" stop-opacity=".88"/></linearGradient>
+<linearGradient id="i78493rim" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6FE0D0" stop-opacity=".55"/><stop offset=".5" stop-color="#6FE0D0" stop-opacity=".12"/><stop offset="1" stop-color="#6FE0D0" stop-opacity="0"/></linearGradient>
+<linearGradient id="i78493dof" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#03181A" stop-opacity="0"/><stop offset="1" stop-color="#03181A" stop-opacity=".45"/></linearGradient>
+<filter id="i78493blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4.7"/></filter>
+<filter id="i78493soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3.0"/></filter>
+<filter id="i78493grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+</defs>
+<rect width="900" height="1035" fill="url(#i78493base)"/>
+<rect width="900" height="1035" fill="url(#i78493l1)"/>
+<rect width="900" height="1035" fill="url(#i78493l2)"/>
+<rect width="900" height="1035" fill="url(#i78493l3)"/>
+<g filter="url(#i78493blur)"><circle cx="427" cy="267" r="57" fill="url(#i78493bok)" opacity="0.28"/><circle cx="448" cy="403" r="102" fill="url(#i78493bok)" opacity="0.13"/><circle cx="532" cy="670" r="52" fill="url(#i78493bok)" opacity="0.22"/><circle cx="11" cy="803" r="39" fill="url(#i78493bok)" opacity="0.14"/><circle cx="642" cy="507" r="76" fill="url(#i78493bok)" opacity="0.14"/><circle cx="474" cy="32" r="73" fill="url(#i78493bok)" opacity="0.22"/><circle cx="677" cy="917" r="41" fill="url(#i78493bok)" opacity="0.21"/><circle cx="198" cy="436" r="53" fill="url(#i78493bok)" opacity="0.22"/><circle cx="805" cy="268" r="75" fill="url(#i78493bok)" opacity="0.25"/><circle cx="115" cy="316" r="121" fill="url(#i78493bok)" opacity="0.20"/></g>
+<g transform="translate(-59 -31) scale(5.486)" filter="url(#i78493soft)">
+<path d="M42,196 C40,164 46,141 58,128 C52,116 55,100 67,93 C78,87 92,91 96,102 C101,113 97,124 90,130 C106,137 118,152 123,172 C132,161 148,160 156,169 C164,178 162,192 152,196 Z" fill="url(#i78493sil)"/><path d="M42,196 C40,164 46,141 58,128 C52,116 55,100 67,93 C78,87 92,91 96,102 C101,113 97,124 90,130 C106,137 118,152 123,172 C132,161 148,160 156,169 C164,178 162,192 152,196 Z" fill="none" stroke="url(#i78493rim)" stroke-width="2.2"/>
+</g>
+<rect y="642" width="900" height="393" fill="url(#i78493dof)"/>
+<rect width="900" height="1035" fill="url(#i78493sw)"/>
+<rect width="900" height="1035" fill="url(#i78493vig)"/>
+<rect width="900" height="1035" filter="url(#i78493grain)" opacity=".055" style="mix-blend-mode:overlay"/>
+</svg>

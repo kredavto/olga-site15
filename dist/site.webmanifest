@@ -1,0 +1,18 @@
+{
+  "name": "LUMEN VET — ветеринарная клиника 24/7",
+  "short_name": "LUMEN VET",
+  "description": "Круглосуточная ветеринарная клиника в Москве",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071E21",
+  "theme_color": "#071E21",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

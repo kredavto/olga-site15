@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="i50615base" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#03181A"/><stop offset=".55" stop-color="#0A3B3D"/><stop offset="1" stop-color="#03181A"/>
+</linearGradient>
+<radialGradient id="i50615l1" cx="25%" cy="26%" r="72%">
+<stop offset="0" stop-color="#6FE0D0" stop-opacity="0.37"/><stop offset="1" stop-color="#6FE0D0" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="i50615l2" cx="80%" cy="75%" r="66%">
+<stop offset="0" stop-color="#0F827E" stop-opacity=".5"/><stop offset="1" stop-color="#0F827E" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="i50615l3" cx="45%" cy="68%" r="60%">
+<stop offset="0" stop-color="#C9B392" stop-opacity=".24"/><stop offset="1" stop-color="#C9B392" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="i50615bok"><stop offset="0" stop-color="#6FE0D0" stop-opacity=".85"/><stop offset=".72" stop-color="#6FE0D0" stop-opacity=".18"/><stop offset="1" stop-color="#6FE0D0" stop-opacity="0"/></radialGradient>
+<radialGradient id="i50615vig" cx="50%" cy="46%" r="72%"><stop offset=".5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#03181A" stop-opacity=".72"/></radialGradient>
+<linearGradient id="i50615sw" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".13"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="i50615sil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#03181A" stop-opacity=".46"/><stop offset=".5" stop-color="#03181A" stop-opacity=".68"/><stop offset="1" stop-color="#03181A" stop-opacity=".88"/></linearGradient>
+<linearGradient id="i50615rim" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6FE0D0" stop-opacity=".55"/><stop offset=".5" stop-color="#6FE0D0" stop-opacity=".12"/><stop offset="1" stop-color="#6FE0D0" stop-opacity="0"/></linearGradient>
+<linearGradient id="i50615dof" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#03181A" stop-opacity="0"/><stop offset="1" stop-color="#03181A" stop-opacity=".45"/></linearGradient>
+<filter id="i50615blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6.3"/></filter>
+<filter id="i50615soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4.0"/></filter>
+<filter id="i50615grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+</defs>
+<rect width="1200" height="750" fill="url(#i50615base)"/>
+<rect width="1200" height="750" fill="url(#i50615l1)"/>
+<rect width="1200" height="750" fill="url(#i50615l2)"/>
+<rect width="1200" height="750" fill="url(#i50615l3)"/>
+<g filter="url(#i50615blur)"><circle cx="529" cy="540" r="84" fill="url(#i50615bok)" opacity="0.32"/><circle cx="1027" cy="205" r="106" fill="url(#i50615bok)" opacity="0.12"/><circle cx="92" cy="415" r="169" fill="url(#i50615bok)" opacity="0.32"/><circle cx="258" cy="345" r="82" fill="url(#i50615bok)" opacity="0.26"/><circle cx="948" cy="725" r="133" fill="url(#i50615bok)" opacity="0.33"/><circle cx="644" cy="113" r="80" fill="url(#i50615bok)" opacity="0.14"/><circle cx="892" cy="430" r="170" fill="url(#i50615bok)" opacity="0.25"/></g>
+<g transform="translate(245 0) scale(3.750)" filter="url(#i50615soft)">
+<path d="M0,196 L0,150 L36,150 L36,74 L96,74 L96,150 L124,150 L124,96 L172,96 L172,150 L200,150 L200,196 Z" fill="url(#i50615sil)"/><path d="M0,196 L0,150 L36,150 L36,74 L96,74 L96,150 L124,150 L124,96 L172,96 L172,150 L200,150 L200,196 Z" fill="none" stroke="url(#i50615rim)" stroke-width="2.2"/>
+</g>
+<rect y="465" width="1200" height="285" fill="url(#i50615dof)"/>
+<rect width="1200" height="750" fill="url(#i50615sw)"/>
+<rect width="1200" height="750" fill="url(#i50615vig)"/>
+<rect width="1200" height="750" filter="url(#i50615grain)" opacity=".055" style="mix-blend-mode:overlay"/>
+</svg>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://lumenvet.ru/sitemap.xml
+Host: lumenvet.ru
