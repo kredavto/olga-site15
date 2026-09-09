@@ -1,4 +1,18 @@
 // Базовые данные клиники. Замените на реальные перед публикацией.
+
+/* Базовый адрес сайта. От него строятся canonical, Open Graph,
+   JSON-LD и sitemap.xml, поэтому он обязан совпадать с доменом,
+   на котором сайт реально открывается.
+   Приоритет:
+     1. SITE_URL — задайте, когда подключите собственный домен;
+     2. production-домен Vercel (подставляется автоматически при сборке);
+     3. запасное значение для локальной разработки. */
+const siteUrl = (
+  process.env.SITE_URL
+  || (process.env.VERCEL_PROJECT_PRODUCTION_URL && `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`)
+  || 'https://lumenvet.ru'
+).replace(/\/+$/, '');
+
 export const clinic = {
   name: 'LUMEN VET',
   nameRu: 'Люмен Вет',
@@ -18,7 +32,7 @@ export const clinic = {
   hours: 'Круглосуточно, без выходных',
   hoursShort: '24/7',
   geo: { lat: 55.749, lng: 37.539 },
-  site: 'https://lumenvet.ru',
+  site: siteUrl,
   founded: 2014,
   socials: [
     { label: 'Telegram', href: 'https://t.me/', icon: 'telegram' },
