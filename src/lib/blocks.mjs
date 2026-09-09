@@ -3,7 +3,7 @@ import { services } from '../data/services.mjs';
 import { doctors, doctorBySlug } from '../data/doctors.mjs';
 import { emergencyCases, usp, equipment, stories, gallery, reviews, promos, faq } from '../data/content.mjs';
 import { posts, categories } from '../data/posts.mjs';
-import { esc, attr, img, money, dateRu, plural } from './html.mjs';
+import { esc, attr, img, imgSrc, money, dateRu, plural } from './html.mjs';
 import { icon } from './icons.mjs';
 
 /* ---------- Стилизованная карта (без внешних API и ключей) ---------- */
@@ -220,7 +220,7 @@ export function gallerySection() {
       <h2 class="h2" id="gal-t">Наши пациенты и <em>наша клиника</em></h2>
     </div>
     <div class="masonry">
-      ${gallery.map((g) => `<figure data-lightbox data-caption="${attr(g.caption)}" data-full="/assets/img/${attr(g.image)}.svg" role="button" aria-label="Открыть фото: ${attr(g.caption)}">
+      ${gallery.map((g) => `<figure data-lightbox data-caption="${attr(g.caption)}" data-full="${attr(imgSrc(g.image))}" role="button" aria-label="Открыть фото: ${attr(g.caption)}">
         ${img(g.image, g.alt)}
         <figcaption>${esc(g.caption)}</figcaption>
       </figure>`).join('')}

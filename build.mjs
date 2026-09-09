@@ -10,6 +10,7 @@ import { services } from './src/data/services.mjs';
 import { doctors } from './src/data/doctors.mjs';
 import { posts } from './src/data/posts.mjs';
 import { IMAGES, renderImage, faviconSvg, ogImage } from './src/lib/images.mjs';
+import { photos, photoDir } from './src/lib/photos.mjs';
 
 import homePage from './src/pages/home.mjs';
 import { servicesIndex, servicePage } from './src/pages/services.mjs';
@@ -96,9 +97,19 @@ async function build() {
   const js = await readFile(join(cssDir, 'app.js'), 'utf8');
   const jsBytes = await write('assets/app.js', js);
 
-  // Изображения
+  // Изображения: сгенерированные SVG-плейсхолдеры…
   let imgBytes = 0;
   for (const key of Object.keys(IMAGES)) imgBytes += await write(`assets/img/${key}.svg`, renderImage(key));
+  // …и реальные фотографии из src/photos, если они есть
+  let photoBytes = 0, photoFiles = 0;
+  for (const entry of photos.values()) {
+    for (const f of entry.files) {
+      const buf = await readFile(join(photoDir, f.name));
+      await mkdir(join(OUT, 'assets/img'), { recursive: true });
+      await writeFile(join(OUT, 'assets/img', f.name), buf);
+      photoBytes += buf.length; photoFiles++;
+    }
+  }
   await write('assets/favicon.svg', faviconSvg);
   let ogBytes = 0;
   for (const [key, title, sub] of ogTargets()) ogBytes += await write(`assets/og/${key}.svg`, ogImage(title, sub));
@@ -135,6 +146,7 @@ ${routes.map((r) => `  <url><loc>${clinic.site}${r.path}</loc><lastmod>${r.lastm
   console.log(`  HTML   ${pages + 1} страниц  ${kb(htmlBytes)}`);
   console.log(`  CSS    ${kb(cssBytes)}   JS ${kb(jsBytes)}`);
   console.log(`  IMG    ${Object.keys(IMAGES).length} SVG ${kb(imgBytes)}  ·  OG ${ogTargets().length} ${kb(ogBytes)}`);
+  console.log(`  ФОТО   ${photos.size} из ${Object.keys(IMAGES).length} ключей заменены реальными снимками (${photoFiles} файлов, ${kb(photoBytes)})`);
   console.log(`  →  ${OUT}`);
 }
 

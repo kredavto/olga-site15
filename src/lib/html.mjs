@@ -1,4 +1,5 @@
 import { IMAGES, imageSize } from './images.mjs';
+import { photos } from './photos.mjs';
 
 export const esc = (s = '') => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -21,16 +22,34 @@ export const dateRu = (iso) => {
   return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
 };
 
-/** <img> с явными размерами (нет layout shift), lazy + async decoding. */
+/**
+ * Изображение с явными размерами (нет layout shift), lazy + async decoding.
+ * Если в src/photos/ лежит реальное фото с таким ключом — отдаём <picture>
+ * с AVIF/WebP; иначе — сгенерированный SVG-плейсхолдер.
+ */
 export function img(key, alt, opts = {}) {
-  const [w, h] = imageSize(key);
-  const known = !!IMAGES[key];
+  const photo = photos.get(key);
+  const [fw, fh] = imageSize(key);
+  const [w, h] = (photo && photo.size) || [fw, fh];
   const cls = opts.class ? ` class="${attr(opts.class)}"` : '';
-  const eager = opts.eager;
   const sizes = opts.sizes ? ` sizes="${attr(opts.sizes)}"` : '';
-  return `<img src="/assets/img/${attr(known ? key : 'hero-main')}.svg" alt="${attr(alt)}" width="${w}" height="${h}"${cls}${sizes}`
-    + (eager ? ' fetchpriority="high" decoding="async"' : ' loading="lazy" decoding="async"')
-    + `>`;
+  const loading = opts.eager ? ' fetchpriority="high" decoding="async"' : ' loading="lazy" decoding="async"';
+  const src = photo
+    ? `/assets/img/${photo.fallback.name}`
+    : `/assets/img/${IMAGES[key] ? key : 'hero-main'}.svg`;
+  const tag = `<img src="${attr(src)}" alt="${attr(alt)}" width="${w}" height="${h}"${cls}${sizes}${loading}>`;
+  if (!photo || !photo.sources.length) return tag;
+  const sources = photo.sources
+    .map((f) => `<source srcset="/assets/img/${attr(f.name)}" type="${attr(f.mime)}">`)
+    .join('');
+  return `<picture>${sources}${tag}</picture>`;
+}
+
+/** Прямой URL картинки (для лайтбокса и og). */
+export function imgSrc(key) {
+  const photo = photos.get(key);
+  if (photo) return `/assets/img/${photo.fallback.name}`;
+  return `/assets/img/${IMAGES[key] ? key : 'hero-main'}.svg`;
 }
 
 export const cls = (...xs) => xs.filter(Boolean).join(' ');
