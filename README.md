@@ -8,6 +8,7 @@ SEO-структура. Собирается собственным статич
 ```bash
 npm run build     # собрать сайт в ./dist
 npm run preview   # собрать и открыть на http://localhost:4173
+npm run photos    # загрузить фотографии в слоты (см. src/photos/README.md)
 ```
 
 ---
@@ -131,6 +132,8 @@ dist/         результат сборки (готов к статическ�
    поэтому фотографии можно добавлять по одной.
    Полный список из 59 слотов с размерами и описанием кадров —
    в [`src/photos/README.md`](src/photos/README.md).
+   Закрыть все слоты разом можно скриптом (нужен бесплатный ключ Unsplash):
+   `UNSPLASH_ACCESS_KEY=xxx npm run photos`, затем `npm run build`.
 2. **Контакты и реквизиты.** `src/data/clinic.mjs`: название, телефон, адрес,
    координаты, ссылки на соцсети; `src/data/content.mjs` → `documents`: лицензии.
 3. **Цены и врачи.** `src/data/prices.mjs`, `src/data/doctors.mjs`.

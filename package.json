@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
-    "preview": "node build.mjs && npx --yes serve dist -l 4173"
+    "preview": "node build.mjs && npx --yes serve dist -l 4173",
+    "photos": "node scripts/fetch-photos.mjs"
   },
   "engines": {
     "node": ">=20"
