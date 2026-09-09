@@ -150,7 +150,7 @@ html.js [data-stagger].is-in > *{opacity:1;transform:none}
 /* Split text reveal */
 .split-line{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
 html.js .split-line > span{display:block;transform:translateY(105%);transition:transform 1s var(--ease-out);transition-delay:calc(var(--i,0) * 90ms)}
-.is-in .split-line > span,.split-ready.is-in .split-line > span{transform:none}
+html.js .is-in .split-line > span,html.js .split-ready.is-in .split-line > span{transform:none}
 
 /* Marquee ---------------------------------------------------- */
 .marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
